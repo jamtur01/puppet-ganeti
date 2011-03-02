@@ -12,6 +12,6 @@ Puppet::Type.type(:gntinstance).provide(:gntinstance) do
     end
 
     def exists?
-        list = gntins :list
+        gntins :list resource[:name]
     end
 end
